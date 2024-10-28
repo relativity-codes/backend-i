@@ -14,9 +14,9 @@ class WalletController extends Controller
     /**
      * Fund the authenticated user's wallet.
      */
-    public function fundWallet(FundWalletRequest $request, $user_id): JsonResponse
+    public function fundWallet(FundWalletRequest $request, $id): JsonResponse
     {
-        $wallet = Wallet::where('user_id', $user_id)->first();
+        $wallet = Wallet::where('user_id', $id)->first();
         if (isset($wallet)) {
             $wallet->balance += $request->amount;
             $wallet->save();
