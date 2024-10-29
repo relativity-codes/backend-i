@@ -76,9 +76,8 @@
   php artisan view:cache
   ```
 
-## Access the Application
+## Access the Application Documentation
 
-Visit `http://127.0.0.1:8000` in your browser.
 Visit `http://127.0.0.1:8000/docs/api` for the API documentation.
 
 ## Note
