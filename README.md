@@ -10,8 +10,8 @@
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/relativity-codes/backend-interview.git 
-   cd backend-interview
+   git clone https://github.com/relativity-codes/backend-i.git 
+   cd backend-i
    ```
 
 2. **Install Dependencies**
