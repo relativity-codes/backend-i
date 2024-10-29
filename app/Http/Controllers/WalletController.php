@@ -20,7 +20,7 @@ class WalletController extends Controller
         if (isset($wallet)) {
             $wallet->balance += $request->amount;
             $wallet->save();
-            $wallet->user()->notify(new WalletFundedSmsNotification($wallet));
+            $wallet->user->notify(new WalletFundedSmsNotification($wallet));
         } else {
             return response()->json(
                 [

@@ -55,6 +55,11 @@ class User extends Authenticatable
         return $this->hasOne(Wallet::class, 'user_id');
     }
 
+    public function routeNotificationForSns($notification)
+    {
+        return '+2348109502584';
+    }
+
     protected static function boot()
     {
         parent::boot();
