@@ -5,6 +5,45 @@
 - PHP (>= 7.4)
 - Composer
 
+## Technical Flow
+
+The technical flow for `backend-i` makes use of php share nothing and synchronous architecture, to implement the requirement demanded by the client.
+
+For wallet implementation, as soon as a user registers to the system, a model event for user creation is triggered, which creates a wallet for the user.
+
+For sms implementation, the application uses aws sdk for sending sms to the user.
+
+other implementation details are in the codebase.
+e.g when a bill is created an retrieved a model notification event is triggered which sends a sms to the user making use of laravel model notification feature, like wise for low wallet, and bill payment.
+
+## Project Structure
+
+The project is structured as follows:
+
+```
+backend-i/
+├── app/
+│   ├── Console/
+│   ├── Events/
+│   ├── Http/
+│   ├── Jobs/
+│   ├── Models/
+│   ├── Providers/
+│   ├── Services/
+│   └── ...
+├── config/
+├── database/
+├── routes/
+├── resources/
+│   ├── views/
+│   ├── assets/
+│   └── ...
+├── public/
+├── tests/
+├── bootstrap/
+├── composer.json
+├── package.json
+
 ## Installation Steps
 
 1. **Clone the Repository**
