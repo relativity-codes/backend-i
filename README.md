@@ -23,23 +23,23 @@
 3. **Set Up Environment**
    - Copy the `.env.example` file to `.env`
 
-   ```bash
-   cp .env.example .env
-   ```
+    ```bash
+    cp .env.example .env
+    ```
 
    - Generate the application key:
 
-   ```bash
-   php artisan key:generate
-   ```
+    ```bash
+    php artisan key:generate
+    ```
 
 4. **Configure SQLite Database**
    - In the `.env` file, set the database connection to SQLite:
 
-     ```plaintext
-     DB_CONNECTION=sqlite
-     DB_DATABASE=/absolute/path/to/database.sqlite  (optional)
-     ```
+    ```plaintext
+    DB_CONNECTION=sqlite
+    DB_DATABASE=/absolute/path/to/database.sqlite  (optional)
+    ```
 
    - Also setup aws for sms service
 
